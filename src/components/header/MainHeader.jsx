@@ -4,6 +4,7 @@ import MenuIcon from "@/components/icons/MenuIcon";
 import CartIcon from "@/components/icons/CartIcon";
 import CloseIcon from "@/components/icons/CloseIcon";
 import { useState } from "react";
+import NavLinkHeader from "@/components/header/NavLinkHeader";
 
 
 
@@ -20,7 +21,8 @@ const MainHeader = () => {
     }
     
     return (
-    <header className="container flex items-center mx-auto px-4 gap-8 bg-gray-200">
+<>
+    <header className="container flex items-center mx-auto gap-8 p-4 md:p-0">
         <button className="md:hidden" onClick={handleOpenMenu}>
             <MenuIcon/>
         </button>
@@ -30,11 +32,11 @@ const MainHeader = () => {
             <button className="mb-12 md:hidden" onClick={handleCloseMenu}>
                 <CloseIcon />
             </button>
-            <a href="#">Coleccion</a>
-            <a href="#">Hombre</a>
-            <a href="#">Mujer</a>
-            <a href="#">Contacto</a>
-            <a href="#">Nosotros</a>
+            <NavLinkHeader text="Coleccion"/>
+            <NavLinkHeader text="Hombre"/>
+            <NavLinkHeader text="Mujer"/>
+            <NavLinkHeader text="Contacto"/>
+            <NavLinkHeader text="Nosotros"/>
         </nav>
         <div className="flex gap-4">
             <button className="">
@@ -42,7 +44,9 @@ const MainHeader = () => {
             </button>
             <img src={EscudoBoca} alt="" className="w-12 h-12"/>
         </div>
-</header>
+    </header>
+    <span className="container hidden md:block h-[1px] w-full bg-gray-500 mx-auto"></span>
+</>
     ) }
 
 export default MainHeader;
