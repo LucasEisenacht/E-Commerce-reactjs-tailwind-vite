@@ -14,7 +14,7 @@ const MainHeader = () => {
 
 
     const handleOpenMenu = () => {
-        setNavClass("absolute bg-white top-0 left-0 h-full p-8 flex flex-col md:flex md:mr-auto md:flex-row md:gap-4 md:static md:p-0 gap-y-5 font-bold w-4/5")
+        setNavClass("absolute z-10 bg-white top-0 left-0 h-full p-8 flex flex-col md:flex md:mr-auto md:flex-row md:gap-4 md:static md:p-0 gap-y-5 font-bold w-4/5")
     }
     const handleCloseMenu = () => {
         setNavClass("hidden h-full md:flex md:mr-auto md:flex-row md:gap-4 md:static md:p-0 font-bold w-4/5")
